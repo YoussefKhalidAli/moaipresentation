@@ -8,6 +8,11 @@ const questions = [
     answer: "Volcanic rock",
   },
   {
+    question: "Where are the Moai located?",
+    options: ["Hawaii", "Rapa Nui", "Peru", "Australia"],
+    answer: "Rapa Nui",
+  },
+  {
     question: "How many moai statues are there on Rapa Nui",
     options: ["90", "500", "900", "1500"],
     answer: "900",
@@ -21,11 +26,6 @@ const questions = [
     question: "What tool was used to carve the Moai statues",
     options: ["Chisel", "Pickaxe", "toki", "Hammer"],
     answer: "toki",
-  },
-  {
-    question: "Where are the Moai located?",
-    options: ["Hawaii", "Rapa Nui", "Peru", "Australia"],
-    answer: "Rapa Nui",
   },
 ];
 
