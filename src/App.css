@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Main container */
+.quiz-container {
+  width: 100%;
+  max-width: 420px; /* perfect phone width */
+  padding: 25px;
+  text-align: center;
+  margin-bottom: 40vh;
+}
+
+/* Question counter */
+.quiz-container h2 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Question text */
+.quiz-container h1 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+/* Options container */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Option button */
+.option {
+  padding: 14px;
+  border-radius: 12px;
+  border: 2px solid #e0e0e0;
+  background: #fafafa;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: #222;
+}
+
+.option:hover {
+  background: #f0f0f0;
+}
+
+/* Correct */
+.correct {
+  background: #e6f9ec !important;
+  border-color: #28a745 !important;
+  color: #1e7e34;
+  animation: glow 1s infinite alternate;
+}
+
+/* Wrong */
+.wrong {
+  background: #fdeaea !important;
+  border-color: #dc3545 !important;
+  color: #a71d2a;
+  animation: shake 0.5s;
+}
+
+.video-wrapper {
+  margin-top: 20px;
+  width: 100%;
+  height: 280px; /* adjust height if needed */
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+}
+
+.reward-video {
+  height: 100%;
+  width: 200%;
+  object-fit: cover;
+  transform: translateX(-25%);
+}
+
+/* Glow animation */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(40, 167, 69, 0.7);
+  }
+}
+
+/* Shake animation */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-6px);
+  }
+  80% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Result screen styling */
+.quiz-container p {
+  font-size: 16px;
+  margin-top: 15px;
+  color: #555;
+}
+
+/* Small screen adjustments */
+@media (max-width: 380px) {
+  .quiz-container {
+    padding: 20px;
+  }
+
+  .quiz-container h1 {
+    font-size: 18px;
+  }
+
+  .option {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
