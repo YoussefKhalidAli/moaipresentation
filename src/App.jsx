@@ -64,7 +64,7 @@ function App() {
 
         {score === 5 ? (
           <>
-            <p>🔥 PERFECT SCORE! Watch your reward 👇</p>
+            <p>🔥 PERFECT SCORE!</p>
 
             <div className="video-wrapper">
               <video
